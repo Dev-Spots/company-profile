@@ -5,34 +5,34 @@ export default function NavList() {
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <li color="blue-gray" className="p-1 font-medium">
         <Link
-          href="#"
+          href="/#company"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Pages
+          Company
         </Link>
       </li>
       <li color="blue-gray" className="p-1 font-medium">
         <Link
-          href="#"
+          href="/#mission-vision"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Account
+          Mission And Vision
         </Link>
       </li>
       <li color="blue-gray" className="p-1 font-medium">
         <Link
-          href="#"
+          href="/#tech"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Blocks
+          Our Techstack
         </Link>
       </li>
       <li color="blue-gray" className="p-1 font-medium">
         <Link
-          href="#"
+          href="/#contact"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
-          Docs
+          Contact / Carrers
         </Link>
       </li>
     </ul>
