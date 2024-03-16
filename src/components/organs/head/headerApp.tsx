@@ -1,19 +1,7 @@
+import { getHeaderDesc } from "@/helpers/text";
 import type { HeaderAppProps } from "@/interfaces";
-import headerDesc from "@/json/descriptionHead.json";
 
 export default function HeaderApp({ lang }: HeaderAppProps) {
-  const getDesc = () => {
-    switch (lang) {
-      case "Bosnia":
-        return headerDesc["bosnia"];
-      case "Indonesia":
-        return headerDesc["indonesia"];
-      case "English":
-      default:
-        return headerDesc["english"];
-    }
-  };
-
   return (
     <head>
       <title>Balkan Dreams</title>
@@ -22,7 +10,7 @@ export default function HeaderApp({ lang }: HeaderAppProps) {
         name="format-detection"
         content="telephone=no, date=no, email=no, address=no"
       />
-      <meta name="description" content={getDesc()} />
+      <meta name="description" content={getHeaderDesc(lang)} />
       <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />

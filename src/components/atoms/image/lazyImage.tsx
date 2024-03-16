@@ -20,7 +20,7 @@ export default function LazyLoadImg({
   const [loading, setLoading] = useState<boolean>(true);
 
   return (
-    <div
+    <figure
       className={`overflow-hidden ${!!rounded ? rounded : ""} ${
         loading ? "animate-pulse" : ""
       }`}
@@ -38,6 +38,6 @@ export default function LazyLoadImg({
         } ${!!rounded ? rounded : ""} ${className}`}
         {...rest}
       />
-    </div>
+    </figure>
   );
 }

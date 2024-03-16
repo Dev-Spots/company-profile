@@ -13,3 +13,15 @@ export type Languages = "English" | "Bosnia" | "Indonesia";
 export interface GlobalContextValue {
   lang: Languages;
 }
+
+export type PageProps<
+  params = Record<string, string>,
+  searchParams = Record<string, string>
+> = {
+  params?: params;
+  searchParams?: searchParams;
+};
+
+export interface LangProps {
+  lang?: Languages;
+}
