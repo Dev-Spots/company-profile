@@ -1,4 +1,5 @@
 import MissionVision from "@/components/organs/content/mission-vision";
+import OurTeam from "@/components/organs/content/team";
 import MainHero from "@/components/organs/hero/mainHero";
 import NavbarApp from "@/components/organs/navbar/navbarApp";
 import type { Languages, PageProps } from "@/interfaces";
@@ -12,6 +13,7 @@ export default function Home({
       <main>
         <MainHero lang={searchParams?.lang} />
         <MissionVision lang={searchParams?.lang} />
+        <OurTeam />
       </main>
     </>
   );

@@ -6,7 +6,10 @@ import type { LangProps } from "@/interfaces";
 export default function MissionVision({ lang }: LangProps) {
   const { mission, vision } = getMissionVision(lang);
   return (
-    <section className="max-w-screen-xl px-4 mx-auto my-8 sm:my-12 sm:px-6 md:my-16">
+    <section
+      className="max-w-screen-xl px-4 mx-auto my-8 sm:my-12 sm:px-6 md:my-16"
+      id="mission-vision"
+    >
       <div className="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
         <div className="relative sm:max-w-lg sm:mx-auto lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
           <LazyLoadImg src={logo} alt="mission" width={500} height={500} />

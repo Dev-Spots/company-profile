@@ -21,6 +21,14 @@ export default function NavList() {
       </li>
       <li color="blue-gray" className="p-1 font-medium">
         <Link
+          href="/#team"
+          className="flex items-center hover:text-blue-500 transition-colors"
+        >
+          Our Team
+        </Link>
+      </li>
+      <li color="blue-gray" className="p-1 font-medium">
+        <Link
           href="/#tech"
           className="flex items-center hover:text-blue-500 transition-colors"
         >
