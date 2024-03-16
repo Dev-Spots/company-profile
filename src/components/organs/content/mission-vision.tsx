@@ -33,13 +33,11 @@ export default function MissionVision({ lang }: LangProps) {
           <LazyLoadImg width={500} height={500} src={logo} alt="vision" />
         </div>
         <hgroup className="lg:hidden sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left p-10">
-          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl">
-            Keep control your branding
+          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-cyan-200 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl">
+            Our Vision
           </h2>
           <p className="mt-3 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-            minima voluptatum dicta tenetur natus. Magni deleniti dolorem ipsam
-            sunt vel soluta.
+            {vision}
           </p>
         </hgroup>
       </div>
