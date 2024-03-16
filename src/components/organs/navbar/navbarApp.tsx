@@ -5,7 +5,6 @@ import { Collapse } from "@/components/atoms/collapse/material-tailwind";
 import { Navbar } from "@/components/atoms/navbar/material-tailwind";
 import { IconButton } from "@/components/icons/material-tailwind";
 import NavList from "@/components/atoms/navbar/navList";
-import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Typography } from "@/components/atoms/typography/material-tailwind";
 

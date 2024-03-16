@@ -10,7 +10,9 @@ export default function Home({
 }: PageProps<any, { lang?: Languages }>) {
   return (
     <>
-      <NavbarApp />
+      <header className="fixed z-50 xl:ml-auto m-0 w-[100%] xl:mr-auto max-w-screen-2xl 2xl:ml-[2.5rem]">
+        <NavbarApp />
+      </header>
       <main>
         <MainHero lang={searchParams?.lang} />
         <MissionVision lang={searchParams?.lang} />
