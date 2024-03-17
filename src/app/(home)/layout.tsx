@@ -6,6 +6,7 @@ export interface HomeLayoutProps extends ChildrenProps {
   navbar: ReactNode;
   team: ReactNode;
   tech: ReactNode;
+  contact: ReactNode;
 }
 
 export default function HomeLayout({
@@ -14,6 +15,7 @@ export default function HomeLayout({
   navbar,
   team,
   tech,
+  contact,
 }: HomeLayoutProps) {
   return (
     <>
@@ -23,6 +25,7 @@ export default function HomeLayout({
         {missionVision}
         {team}
         {tech}
+        {contact}
       </main>
     </>
   );
