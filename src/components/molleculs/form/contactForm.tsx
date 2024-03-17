@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation";
 import { Input, Textarea } from "@/components/atoms/input/material-tailwind";
 import { Button } from "@/components/atoms/button/material-tailwind";
 import { swalError } from "@/helpers/swal";
+import { useFormStatus } from "react-dom";
 
 export interface ContactFormProps {
   email: string;
@@ -13,7 +14,9 @@ export interface ContactFormProps {
 }
 
 export default function ContactForm() {
-  const searchParams = useSearchParams();
+  const { pending } = useFormStatus();
+  const params = useSearchParams();
+  const searchParams = new URLSearchParams(params!);
   const error = searchParams.get("error-input-msg");
   const [data, setData] = useState<ContactFormProps>({
     email: "",
@@ -24,10 +27,15 @@ export default function ContactForm() {
   useEffect(() => {
     if (error) {
       swalError(error);
-      window.history.replaceState({}, "", window.location.pathname);
+      searchParams.delete("error-input-msg");
+      window.history.replaceState(
+        {},
+        "",
+        window.location.pathname + "?" + searchParams.toString()
+      );
       return;
     }
-  }, [error]);
+  }, [error, params]);
 
   const onChangeHandler = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -39,6 +47,8 @@ export default function ContactForm() {
       [name]: value,
     }));
   };
+
+  const disabledCond = pending || !data.email || !data.name || !data.message;
 
   return (
     <>
@@ -52,7 +62,7 @@ export default function ContactForm() {
             onChange={onChangeHandler}
             placeholder="name"
             color="blue"
-            className="cursor-pointer active:cursor-text bg-gray-100"
+            className="cursor-pointer active:cursor-text !bg-gray-100"
           />
         </label>
         <label className="w-full text-cyan-100 text-xl">
@@ -64,7 +74,7 @@ export default function ContactForm() {
             name="email"
             onChange={onChangeHandler}
             placeholder="email"
-            className="cursor-pointer active:cursor-text bg-gray-100"
+            className="cursor-pointer active:cursor-text !bg-gray-100"
           />
         </label>
       </div>
@@ -75,14 +85,14 @@ export default function ContactForm() {
         onChange={onChangeHandler}
         variant="outlined"
         placeholder="message"
-        className="cursor-pointer active:cursor-text bg-gray-100"
+        className="cursor-pointer active:cursor-text !bg-gray-100"
       />
       <Button
-        disabled={!data.email || !data.name || !data.message}
+        disabled={disabledCond}
         type="submit"
         color="blue"
         className={`rounded-lg bg-neutral-700 px-4 py-2 text-white shadow-md hover:bg-neutral-800 hover:shadow-lg border ${
-          !(!data.email || !data.name || !data.message) ? "bg-cyan-200" : ""
+          !disabledCond ? "bg-cyan-200" : ""
         }`}
       >
         send
