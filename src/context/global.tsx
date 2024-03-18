@@ -1,7 +1,11 @@
 "use client";
 
 import { LANGUAGES } from "@/constants";
-import type { ChildrenProps, GlobalContextValue } from "@/interfaces";
+import type {
+  ChildrenProps,
+  GlobalContextValue,
+  Languages,
+} from "@/interfaces";
 import { useSearchParams } from "next/navigation";
 import {
   useState,
@@ -29,7 +33,7 @@ export default function GlobalContext({ children }: ChildrenProps) {
 
   function updateParams(key: string, value: string) {
     params.set(key, value);
-    if (key === "lang" && LANGUAGES.includes(value))
+    if (key === "lang" && LANGUAGES.includes(value as Languages))
       setGlobalState((prev) => ({
         ...prev,
         lang: value as any,

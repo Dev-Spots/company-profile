@@ -4,7 +4,7 @@ import { useState, useEffect, type ChangeEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { Input, Textarea } from "@/components/atoms/input/material-tailwind";
 import { Button } from "@/components/atoms/button/material-tailwind";
-import { swalError } from "@/helpers/swal";
+import { swalError, swalSuccess } from "@/helpers/swal";
 import { useFormStatus } from "react-dom";
 
 export interface ContactFormProps {
@@ -17,6 +17,7 @@ export default function ContactForm() {
   const { pending } = useFormStatus();
   const params = useSearchParams();
   const searchParams = new URLSearchParams(params!);
+  const success = searchParams.get("success-msg");
   const error = searchParams.get("error-input-msg");
   const [data, setData] = useState<ContactFormProps>({
     email: "",
@@ -25,6 +26,11 @@ export default function ContactForm() {
   });
 
   useEffect(() => {
+    if (success) {
+      swalSuccess(success);
+      return;
+    }
+
     if (error) {
       swalError(error);
       searchParams.delete("error-input-msg");
@@ -35,7 +41,7 @@ export default function ContactForm() {
       );
       return;
     }
-  }, [error, params]);
+  }, [error, params, success]);
 
   const onChangeHandler = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>

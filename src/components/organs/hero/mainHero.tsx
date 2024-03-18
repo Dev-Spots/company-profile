@@ -1,6 +1,5 @@
 import LazyLoadImg from "@/components/atoms/image/lazyImage";
 import logo from "@/components/images/Balkan-Dreams-Logo.png";
-import SimpleButtonGroup from "@/components/molleculs/button/buttonGroup";
 import { getMainHeroText } from "@/helpers/text";
 import type { LangProps } from "@/interfaces";
 import { Typography } from "@/components/atoms/typography/material-tailwind";
@@ -26,7 +25,6 @@ export default function MainHero({ lang }: LangProps) {
         <p className="text-2xl mb-8 text-gray-600 font-sans">
           {getMainHeroText(lang)}
         </p>
-        <SimpleButtonGroup datas={[{ text: "btn1" }, { text: "btn2" }]} />
       </hgroup>
     </section>
   );

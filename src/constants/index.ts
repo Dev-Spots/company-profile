@@ -1,1 +1,3 @@
-export const LANGUAGES = ["English", "Bosnia", "Indonesia"];
+import type { Languages } from "@/interfaces";
+
+export const LANGUAGES: Languages[] = ["English", "Bosnia", "Indonesia"];

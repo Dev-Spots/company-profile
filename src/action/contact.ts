@@ -16,6 +16,7 @@ export const contactHandler = async (formdata: FormData) => {
       message as string,
       `message from ${name}`
     );
+    redirect(`/?success-msg=success`, RedirectType.replace);
   } catch (err) {
     redirect(
       `/?error-input-msg=${(err as Error)?.message || "unexpected error"}`,

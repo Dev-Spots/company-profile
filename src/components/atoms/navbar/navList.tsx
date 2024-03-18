@@ -1,3 +1,4 @@
+import ChangeLang from "@/components/molleculs/menu/change-lang";
 import Link from "next/link";
 
 export default function NavList() {
@@ -42,6 +43,9 @@ export default function NavList() {
         >
           Contact / Carrers
         </Link>
+      </li>
+      <li color="blue-gray" className="p-1 font-medium">
+        <ChangeLang />
       </li>
     </ul>
   );
