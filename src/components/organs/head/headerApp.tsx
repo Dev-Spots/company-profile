@@ -28,8 +28,7 @@ export default function HeaderApp({ lang }: HeaderAppProps) {
       />
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width" />
-      {/* <link rel="icon" type="image/jpg" href="/global/fg.jpg" /> */}
-      {/* <link rel="stylesheet" href="/styles/global.css" /> */}
+      <link rel="icon" type="image/png" href="/global/Balkan-Dreams-Logo.png" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link

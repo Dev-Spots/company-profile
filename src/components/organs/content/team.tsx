@@ -6,7 +6,7 @@ export default function OurTeam() {
   return (
     <section
       id="team"
-      className="container flex flex-col mx-auto px-5 py-24 items-center justify-center"
+      className="container flex flex-col mx-auto my-0 px-5 py-12 items-center justify-center h-1/4"
     >
       <Typography
         className="my-4 text-5xl font-bold leading-tight text-cyan-200"
@@ -14,7 +14,7 @@ export default function OurTeam() {
       >
         Our Teams
       </Typography>
-      <article className="max-w-screen-xl flex flex-wrap xl:justify-between justify-center items-center xl:space-x-16 lg:space-x-8">
+      <article className="max-w-screen-xl sm:space-y-8 flex flex-wrap xl:justify-between justify-center items-center xl:space-x-16 lg:space-x-8">
         {TEAM.map((el) => (
           <ProfileCard {...el} key={el.name} />
         ))}

@@ -7,7 +7,7 @@ import { Typography } from "@/components/atoms/typography/material-tailwind";
 export default function MainHero({ lang }: LangProps) {
   return (
     <section
-      className="container mx-auto flex px-5 py-16 items-center justify-center flex-col"
+      className="container mx-auto flex px-5 py-12 items-center justify-center flex-col h-1/4"
       id="company"
     >
       <LazyLoadImg
@@ -22,7 +22,7 @@ export default function MainHero({ lang }: LangProps) {
         >
           Balkan Dreams
         </Typography>
-        <p className="text-2xl mb-8 text-gray-600 font-sans">
+        <p className="text-2xl mb-4 text-gray-600 font-sans">
           {getMainHeroText(lang)}
         </p>
       </hgroup>

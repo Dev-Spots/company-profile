@@ -22,10 +22,15 @@ export default function HomeLayout({
       {navbar}
       <main>
         {children}
+        <hr className="px-4 mx-12 my-8 sm:my-12 sm:px-6 md:my-16" />
         {missionVision}
+        <hr className="px-4 mx-12 my-8 sm:my-12 sm:px-6 md:my-16" />
         {team}
+        <hr className="px-4 mx-12 my-8 sm:my-12 sm:px-6 md:my-16" />
         {tech}
+        <hr className="px-4 mx-12 my-8 sm:my-12 sm:px-6 md:my-16" />
         {contact}
+        <hr className="px-4 mx-12 my-8 sm:my-12 sm:px-6 md:my-16" />
       </main>
     </>
   );
