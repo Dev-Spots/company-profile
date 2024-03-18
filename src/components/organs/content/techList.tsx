@@ -80,7 +80,7 @@ export default function TechStackList() {
       <hgroup className="flex justify-center">
         <Typography
           as="h1"
-          className="text-cyan-200 text-5xl font-bold leading-tight"
+          className="text-cyan-200 text-5xl font-bold leading-tight cursor-default underline"
         >
           Our Techstacks
         </Typography>

@@ -9,7 +9,7 @@ export default function OurTeam() {
       className="container flex flex-col mx-auto my-0 px-5 py-12 items-center justify-center h-1/4"
     >
       <Typography
-        className="my-4 text-5xl font-bold leading-tight text-cyan-200"
+        className="my-4 text-5xl font-bold leading-tight text-cyan-200 underline cursor-default"
         as="h1"
       >
         Our Teams

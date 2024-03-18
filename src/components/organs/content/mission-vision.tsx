@@ -23,7 +23,7 @@ export default function MissionVision({ lang }: LangProps) {
           />
         </div>
         <hgroup className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left p-10">
-          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl text-cyan-200">
+          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl text-cyan-200 underline cursor-default">
             Our Mission
           </h2>
           <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
@@ -33,7 +33,7 @@ export default function MissionVision({ lang }: LangProps) {
       </div>
       <div className="lg:grid lg:grid-cols-12 lg:gap-8 mt-0 items-center">
         <hgroup className="hidden lg:block sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left p-10">
-          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-cyan-200 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl">
+          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-cyan-200 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl underline cursor-default">
             Our Vision
           </h2>
           <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">

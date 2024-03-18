@@ -18,7 +18,7 @@ export default function MainHero({ lang }: LangProps) {
       <hgroup className="text-center lg:w-5/12 w-full">
         <Typography
           as="h1"
-          className="my-4 text-5xl font-bold leading-tight text-cyan-200"
+          className="my-4 cursor-default underline text-5xl font-bold leading-tight text-cyan-200"
         >
           Balkan Dreams
         </Typography>
