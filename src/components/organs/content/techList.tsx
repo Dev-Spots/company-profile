@@ -85,11 +85,12 @@ export default function TechStackList() {
           Our Techstacks
         </Typography>
       </hgroup>
-      <div className="flex flex-col space-y-1 overflow-x-hidden h-20">
+      <div className="flex flex-col space-y-8 overflow-x-hidden h-32">
         {Array.from({ length: 2 }, (_, idx) => (
           <MarqueeElement
             key={idx}
             direction={idx % 2 === 0 ? "left" : "right"}
+            withPadding
           >
             {[...stacks]
               .sort(() => Math.random() - 0.5)
