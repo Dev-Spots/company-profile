@@ -14,7 +14,7 @@ export default function OurTeam() {
       >
         Our Teams
       </Typography>
-      <article className="max-w-screen-xl sm:space-y-8 flex flex-wrap xl:justify-between justify-center items-center xl:space-x-16 lg:space-x-8">
+      <article className="max-w-screen-xl flex flex-wrap xl:justify-between justify-center items-center xl:space-x-16 lg:space-x-8">
         {TEAM.map((el) => (
           <ProfileCard {...el} key={el.name} />
         ))}
