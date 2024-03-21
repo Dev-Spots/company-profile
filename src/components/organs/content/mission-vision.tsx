@@ -1,4 +1,3 @@
-import logo from "@/components/images/Balkan-Dreams-Logo.png";
 import LazyLoadImg from "@/components/atoms/image/lazyImage";
 import { getMissionVision } from "@/helpers/text";
 import type { LangProps } from "@/interfaces";

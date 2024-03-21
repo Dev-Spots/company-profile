@@ -7,6 +7,7 @@ export interface HomeLayoutProps extends ChildrenProps {
   team: ReactNode;
   tech: ReactNode;
   contact: ReactNode;
+  footer: ReactNode;
 }
 
 export default function HomeLayout({
@@ -16,6 +17,7 @@ export default function HomeLayout({
   team,
   tech,
   contact,
+  footer,
 }: HomeLayoutProps) {
   return (
     <>
@@ -32,6 +34,7 @@ export default function HomeLayout({
         {contact}
         <hr className="px-4 mx-12 my-8 sm:my-12 sm:px-6 md:my-16" />
       </main>
+      {footer}
     </>
   );
 }
