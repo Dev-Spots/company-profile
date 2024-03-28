@@ -25,7 +25,7 @@ export default function MissionVision({ lang }: LangProps) {
           <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl text-cyan-200 underline cursor-default">
             Our Mission
           </h2>
-          <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+          <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-sans">
             {mission}
           </p>
         </hgroup>
@@ -35,7 +35,7 @@ export default function MissionVision({ lang }: LangProps) {
           <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-cyan-200 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl underline cursor-default">
             Our Vision
           </h2>
-          <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+          <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-sans">
             {vision}
           </p>
         </hgroup>
@@ -52,7 +52,7 @@ export default function MissionVision({ lang }: LangProps) {
           <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-cyan-200 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl">
             Our Vision
           </h2>
-          <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+          <p className="mt-1 text-base text-gray-600 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl font-sans">
             {vision}
           </p>
         </hgroup>

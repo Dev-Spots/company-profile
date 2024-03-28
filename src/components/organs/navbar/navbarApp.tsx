@@ -25,7 +25,7 @@ export default function NavbarApp() {
   return (
     <Navbar className="mx-auto max-w-screen-xl px-6 py-3 mt-4">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography as="a" href="#" className="mr-4 cursor-pointer py-1.5">
+        <Typography as="a" href="/" className="mr-4 cursor-pointer py-1.5">
           Balkan Dreams
         </Typography>
         <div className="hidden lg:block">

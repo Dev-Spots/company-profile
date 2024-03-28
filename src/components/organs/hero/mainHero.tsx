@@ -22,7 +22,7 @@ export default function MainHero({ lang }: LangProps) {
         >
           Balkan Dreams
         </Typography>
-        <p className="text-2xl mb-4 text-gray-600 font-sans">
+        <p className="text-lg mb-4 text-gray-600 font-sans">
           {getMainHeroText(lang)}
         </p>
       </hgroup>

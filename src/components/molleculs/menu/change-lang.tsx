@@ -9,10 +9,11 @@ import {
 import { LANGUAGES } from "@/constants";
 import { GLOBAL_CONTEXT } from "@/context/global";
 import type { Languages } from "@/interfaces";
-import { type MouseEventHandler, useContext } from "react";
+import { type MouseEventHandler, useContext, useState } from "react";
 
 export default function ChangeLang() {
   const { updateParams } = useContext(GLOBAL_CONTEXT);
+  const [open, setOpen] = useState<boolean>(false);
 
   const updateLang =
     (lang: Languages): MouseEventHandler =>
@@ -22,7 +23,7 @@ export default function ChangeLang() {
     };
 
   return (
-    <Menu>
+    <Menu allowHover open={open} handler={setOpen}>
       <MenuHandler>
         <a className="cursor-pointer flex items-center hover:text-blue-500 transition-colors">
           Lang

@@ -1,9 +1,13 @@
 import ChangeLang from "@/components/molleculs/menu/change-lang";
 import Link from "next/link";
+import NavPages from "./navPages";
 
 export default function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <li color="blue-gray" className="p-1 font-medium">
+        <NavPages />
+      </li>
       <li color="blue-gray" className="p-1 font-medium">
         <Link
           href="/#company"

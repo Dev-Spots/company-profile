@@ -2,6 +2,7 @@ import type { Languages } from "@/interfaces";
 import headerDesc from "@/json/descriptionHead.json";
 import missionVision from "@/json/missionAndVision.json";
 import mainHeroText from "@/json/mainHero.json";
+import aboutText from "@/json/about.json";
 
 export const getHeaderDesc = (lang?: Languages | string) => {
   switch (lang) {
@@ -45,5 +46,17 @@ export const getMainHeroText = (lang?: Languages | string) => {
     case "English":
     default:
       return mainHeroText["english"];
+  }
+};
+
+export const getAboutText = (lang?: Languages | string) => {
+  switch (lang) {
+    case "Bosnia":
+      return aboutText["bosnia"];
+    case "Indonesia":
+      return aboutText["indonesia"];
+    case "English":
+    default:
+      return aboutText["english"];
   }
 };
