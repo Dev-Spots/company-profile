@@ -15,3 +15,5 @@ export type PageProps<
   params?: params;
   searchParams?: searchParams;
 };
+
+export type WrapperAs = "div" | "article" | "main" | "section";
