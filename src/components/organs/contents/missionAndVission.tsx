@@ -1,8 +1,22 @@
+import SectionHeading from "@/components/atoms/header/sectionHeading";
 import LazyLoadImg from "@/components/atoms/image/lazyLoadImg";
 import MISSION from "@/components/images/mission-icon.webp";
 import VISION from "@/components/images/vision-icon.png";
+import { FiTarget, FiEye } from "@/components/atoms/icons/react-icons-fi";
 
-export default function MissionVision() {
+export interface MissionVisionProps {
+  missionTitle: string;
+  visionTitle: string;
+  missionText: string;
+  visionText: string;
+}
+
+export default function MissionVision({
+  missionText,
+  missionTitle,
+  visionText,
+  visionTitle,
+}: MissionVisionProps) {
   return (
     <section className="space-y-2 bg-cover bg-no-repeat" id="mission-vision">
       <div className="lg:grid lg:grid-cols-12 lg:gap-4 space-y-2 items-center">
@@ -16,29 +30,25 @@ export default function MissionVision() {
           />
         </div>
         <hgroup className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left p-10 font-sora">
-          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl text-cyan-200 underline cursor-default">
-            Our Mission
-          </h2>
+          <SectionHeading
+            title={missionTitle}
+            icon={<FiTarget size={20} />}
+            className="!text-cyan-200 !text-2xl"
+          />
           <p className="mt-1 text-base text-neutral-800 dark:text-neutral-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            At Balkan Dreams, our mission is crystal clear, we strive to
-            establish ourselves as the premier agency in the Balkan region. We
-            achieve this through our unwavering commitment to delivering
-            pixel-perfect, fully-functional, production-ready projects. Join us
-            as we reshape the landscape of digital excellence.
+            {missionText}
           </p>
         </hgroup>
       </div>
       <div className="lg:grid lg:grid-cols-12 lg:gap-8 mt-0 items-center">
         <hgroup className="hidden lg:block sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left p-10 font-sora">
-          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-cyan-200 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl underline cursor-default">
-            Our Vision
-          </h2>
+          <SectionHeading
+            title={visionTitle}
+            icon={<FiEye size={20} />}
+            className="!text-cyan-200 !text-2xl"
+          />
           <p className="mt-1 text-base text-neutral-800 dark:text-neutral-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            Balkan Dreams aims to be the industry leader in quality and
-            innovation, pursuing perfection and striving to become the top
-            company in the Balkan region through a commitment to excellence.
-            Were Not Here To Take Part Were Here To Take Over. We&apos;ll
-            achieve that by producing the best products, projects, and services.
+            {visionText}
           </p>
         </hgroup>
         <div className="relative sm:max-w-lg sm:mx-auto lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
@@ -51,15 +61,13 @@ export default function MissionVision() {
           />
         </div>
         <hgroup className="lg:hidden sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left p-10 font-sora">
-          <h2 className="mt-1 text-4xl font-extrabold leading-10 tracking-tight text-cyan-200 sm:leading-none sm:text-6xl lg:text-5xl xl:text-4xl">
-            Our Vision
-          </h2>
+          <SectionHeading
+            title={visionTitle}
+            icon={<FiEye size={20} />}
+            className="!text-cyan-200 !text-2xl"
+          />
           <p className="mt-1 text-base text-neutral-800 dark:text-neutral-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-            Balkan Dreams aims to be the industry leader in quality and
-            innovation, pursuing perfection and striving to become the top
-            company in the Balkan region through a commitment to excellence.
-            Were Not Here To Take Part Were Here To Take Over. We&apos;ll
-            achieve that by producing the best products, projects, and services.
+            {visionText}
           </p>
         </hgroup>
       </div>

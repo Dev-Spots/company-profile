@@ -1,7 +1,12 @@
+import type { Lang } from "@/constants/lang";
 import type { ReactNode } from "react";
 
 export interface ChildrenProps {
   readonly children: ReactNode;
+}
+
+export interface OptionalChildrenProps {
+  readonly children?: ReactNode;
 }
 
 export interface WindowWithDataLayer extends Window {
@@ -12,7 +17,7 @@ export type PageProps<
   params = Record<string, string>,
   searchParams = Record<string, string>
 > = {
-  params?: params;
+  params: { lang: Lang } & params;
   searchParams?: searchParams;
 };
 

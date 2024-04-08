@@ -1,5 +1,6 @@
 import MainViews from "@/components/organs/views/mainViews";
-import type { ChildrenProps } from "@/interfaces";
+import { LANGUAGE } from "@/constants/lang";
+import type { ChildrenProps, PageProps } from "@/interfaces";
 import MainLayout from "@/layouts/mainLayout";
 import type { Metadata } from "next";
 
@@ -8,10 +9,19 @@ export const metadata: Metadata = {
   description: "Your web development solutions",
 };
 
-export default function RootLayout({ children }: ChildrenProps) {
+export type RootLayoutProps = ChildrenProps & PageProps;
+
+export default function RootLayout({
+  children,
+  params: { lang },
+}: RootLayoutProps) {
   return (
-    <MainLayout>
+    <MainLayout lang={lang}>
       <MainViews>{children}</MainViews>
     </MainLayout>
   );
+}
+
+export async function generateStaticParams() {
+  return LANGUAGE.map((lang) => ({ lang }));
 }

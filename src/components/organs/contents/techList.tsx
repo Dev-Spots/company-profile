@@ -34,6 +34,8 @@ import {
 } from "@/components/atoms/icons/stacks";
 import type { ReactNode } from "react";
 import Link from "next/link";
+import SectionHeading from "@/components/atoms/header/sectionHeading";
+import { FiCode } from "@/components/atoms/icons/react-icons-fi";
 
 const size = "120%";
 
@@ -194,7 +196,11 @@ const techstacks = {
   ),
 };
 
-export default function TechStackList() {
+export interface TechStackListProps {
+  title: string;
+}
+
+export default function TechStackList({ title }: TechStackListProps) {
   const stacks: Array<[string, ReactNode]> = Object.entries(techstacks).sort(
     () => Math.random() - 0.5
   );
@@ -202,9 +208,11 @@ export default function TechStackList() {
   return (
     <section className="space-y-6 mb-16 container mx-auto my-auto" id="tech">
       <hgroup className="flex justify-center">
-        <h1 className="text-cyan-200 text-5xl font-bold leading-tight cursor-default underline">
-          Our Techstacks
-        </h1>
+        <SectionHeading
+          title={title}
+          icon={<FiCode size={20} />}
+          className="!text-cyan-200 !text-xl"
+        />
       </hgroup>
       <div className="flex flex-col space-y-8 overflow-x-hidden h-32">
         {Array.from({ length: 2 }, (_, idx) => (

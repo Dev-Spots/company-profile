@@ -9,10 +9,15 @@ import Analytics from "@/components/atoms/scripts/analytics";
 import AppThemeProvider from "@/providers/theme.providers";
 import MainFooter from "@/components/atoms/footer/mainFooter";
 import AppLoader from "@/components/atoms/loaders/appLoader";
+import type { Lang } from "@/constants/lang";
 
-export default function MainLayout({ children }: ChildrenProps) {
+export interface MainLayoutProps extends ChildrenProps {
+  lang: Lang;
+}
+
+export default function MainLayout({ children, lang }: MainLayoutProps) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <GtmHeadScript />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />

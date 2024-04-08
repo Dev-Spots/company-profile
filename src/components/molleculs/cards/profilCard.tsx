@@ -3,6 +3,7 @@ import LazyLoadImg from "@/components/atoms/image/lazyLoadImg";
 import GithubTooltip from "@/components/atoms/tooltip/github";
 import LinkedinTooltip from "@/components/atoms/tooltip/linkedin";
 import TwitterTooltip from "@/components/atoms/tooltip/twitter";
+import type { StaticImageData } from "next/image";
 
 export interface ProfileCardProps {
   github?: string;
@@ -10,7 +11,7 @@ export interface ProfileCardProps {
   linkedin?: string;
   name: string;
   title: string;
-  src: string;
+  src: string | StaticImageData;
   alt: string;
 }
 
@@ -26,7 +27,7 @@ export default function ProfileCard({
   return (
     <BasicCard
       as="article"
-      className="space-y-4 mt-2 xl:space-y-6 cursor-pointer overflow-hidden rounded-l-xl rounded-r-xl border h-max min-w-[350px] border-neutral-300 py-2 !shadow-none duration-500 hover:scale-95 dark:border-neutral-600 dark:bg-neutral-900"
+      className="space-y-4 mt-2 xl:space-y-6 cursor-pointer overflow-hidden rounded-l-xl rounded-r-xl border h-max min-w-[350px] border-neutral-300 py-2 !shadow-none duration-500 hover:scale-95 dark:border-neutral-600 dark:bg-neutral-900 hover:dark:border-white hover:border-4 hover:border-gray-800"
     >
       <header className="flex items-center flex-col">
         <LazyLoadImg

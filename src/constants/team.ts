@@ -1,10 +1,13 @@
+import ANANDAFIQRI from "@/components/images/Ananda-Fiqri.png";
+import DZENISH from "@/components/images/Dzenis.png";
+
 export const TEAM = [
   {
     github: "https://github.com/Dzenis-h",
     linkedin: "https://www.linkedin.com/in/dzenis-h",
     name: "Dzenis Hankusic",
     title: "Chief Executive Officer",
-    src: "/images/Dzenis.png",
+    src: DZENISH,
     alt: "Dzenis-Avatar",
   },
   {
@@ -12,7 +15,7 @@ export const TEAM = [
     linkedin: "https://www.linkedin.com/in/ananda-fiqri",
     name: "Ananda Fiqri",
     title: "Chief Technology Officer",
-    src: "/images/Ananda-Fiqri.png",
+    src: ANANDAFIQRI,
     alt: "Ananda-Fiqri-Avatar",
   },
 ];

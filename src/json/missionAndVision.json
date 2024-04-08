@@ -1,0 +1,30 @@
+{
+  "mission": {
+    "indonesia": {
+      "title": "Misi Kami",
+      "text": "Di Balkan Dreams, misi kami sangat jelas: kami berusaha untuk menjadikan diri kami sebagai agensi utama di wilayah Balkan. Kami mencapai hal ini melalui komitmen kami yang tak tergoyahkan untuk menghadirkan proyek siap produksi yang sempurna, berfungsi penuh, dan siap produksi. Bergabunglah dengan kami saat kami membentuk kembali lanskap keunggulan digital."
+    },
+    "english": {
+      "title": "Our Mission",
+      "text": "At Balkan Dreams, our mission is crystal clear: we strive to establish ourselves as the premier agency in the Balkan region. We achieve this through our unwavering commitment to delivering pixel-perfect, fully-functional, production-ready projects. Join us as we reshape the landscape of digital excellence."
+    },
+    "bosnia": {
+      "title": "naša misija",
+      "text": "U našoj agenciji naša misija je kristalno jasna: nastojimo se etablirati kao vodeća agencija u cijeloj regiji Balkana. To ćemo postići našom nepokolebljivom predanošću pružanju savršenog dizajna, potpuno funkcionalnih projekata spremnih za produkciju. Pridružite nam se dok preoblikujemo krajolik digitalne izvrsnosti."
+    }
+  },
+  "vision": {
+    "indonesia": {
+      "title": "Visi Kami",
+      "text": "Balkan Dreams bertujuan untuk menjadi pemimpin industri dalam kualitas dan inovasi, mengejar kesempurnaan dan berjuang untuk menjadi perusahaan papan atas di wilayah Balkan melalui komitmen terhadap keunggulan. Kami di sini bukan untuk mengambil bagian, kami di sini untuk mengambil alih. Kami akan mencapainya dengan menghasilkan produk, proyek, dan layanan terbaik."
+    },
+    "english": {
+      "title": "Our Vision",
+      "text": "Balkan Dreams aims to be the industry leader in quality and innovation, pursuing perfection and striving to become the top company in the Balkan region through a commitment to excellence. Were Not Here To Take Part Were Here To Take Over. We'll achieve that by producing the best products, projects, and services."
+    },
+    "bosnia": {
+      "title": "naša vizija",
+      "text": "Balkan Dreams ima za cilj biti industrijski lider u kvaliteti i inovacijama, težeći savršenstvu i težnji da postane vodeća tvrtka u balkanskoj regiji kroz predanost izvrsnosti. Nismo ovdje da samo sudjelujemo, mi smo ovdje da preuzmemo. To ćemo postići proizvodnjom najboljih proizvoda, projekata i usluga."
+    }
+  }
+}
