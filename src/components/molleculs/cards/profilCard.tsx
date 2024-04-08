@@ -3,12 +3,14 @@ import LazyLoadImg from "@/components/atoms/image/lazyLoadImg";
 import GithubTooltip from "@/components/atoms/tooltip/github";
 import LinkedinTooltip from "@/components/atoms/tooltip/linkedin";
 import TwitterTooltip from "@/components/atoms/tooltip/twitter";
+import WebsiteTooltip from "@/components/atoms/tooltip/website";
 import type { StaticImageData } from "next/image";
 
 export interface ProfileCardProps {
   github?: string;
   twitter?: string;
   linkedin?: string;
+  website?: string;
   name: string;
   title: string;
   src: string | StaticImageData;
@@ -20,6 +22,7 @@ export default function ProfileCard({
   title,
   twitter,
   linkedin,
+  website,
   name,
   src,
   alt,
@@ -51,6 +54,7 @@ export default function ProfileCard({
         {!!github && <GithubTooltip href={github} />}
         {!!linkedin && <LinkedinTooltip href={linkedin} />}
         {!!twitter && <TwitterTooltip href={twitter} />}
+        {!!website && <WebsiteTooltip href={website} />}
       </footer>
     </BasicCard>
   );

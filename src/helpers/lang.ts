@@ -2,6 +2,7 @@ import "server-only";
 import type { Lang } from "@/constants/lang";
 import MainHeroText from "@/json/mainHero.json";
 import MissionVisionText from "@/json/missionAndVision.json";
+import AboutText from "@/json/about.json";
 
 export const getMainHeroText = (lang?: Lang) => {
   switch (lang) {
@@ -25,5 +26,17 @@ export const getMissionVisionText = (lang?: Lang) => {
     case "en-US":
     default:
       return { mission: mission.english, vision: vision.english };
+  }
+};
+
+export const getAboutText = (lang?: Lang) => {
+  switch (lang) {
+    case "id-ID":
+      return AboutText.indonesia;
+    case "bs-BA":
+      return AboutText.bosnia;
+    case "en-US":
+    default:
+      return AboutText.english;
   }
 };

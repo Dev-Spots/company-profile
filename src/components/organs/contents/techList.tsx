@@ -211,7 +211,7 @@ export default function TechStackList({ title }: TechStackListProps) {
         <SectionHeading
           title={title}
           icon={<FiCode size={20} />}
-          className="!text-cyan-200 !text-xl"
+          className="!text-cyan-500 dark:!text-cyan-200 !text-xl"
         />
       </hgroup>
       <div className="flex flex-col space-y-8 overflow-x-hidden h-32">

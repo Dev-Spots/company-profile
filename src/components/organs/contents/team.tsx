@@ -12,7 +12,7 @@ export default function OurTeam({ title }: OurTeamProps) {
     <section className="space-y-2 bg-cover bg-no-repeat" id="teams">
       <SectionHeading
         title={title}
-        className="!text-cyan-200 flex justify-center !text-2xl"
+        className="!text-cyan-500 dark:!text-cyan-200 flex justify-center !text-2xl"
         icon={<FiActivity size={20} />}
       />
       <article className="max-w-screen-xl flex flex-wrap xl:justify-between space-x-4 mt-3 justify-center items-center xl:space-x-16 lg:space-x-8">

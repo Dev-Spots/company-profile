@@ -14,7 +14,7 @@ export default function MainHero({ title, subTitle, desc }: MainHeroProps) {
       <header className="flex items-center justify-between">
         <div className="font-sora flex gap-2 text-2xl font-medium lg:text-3xl">
           <TypographAnimation
-            className="my-4 cursor-default underline text-2xl font-bold leading-tight text-cyan-200 font-sora"
+            className="my-4 cursor-default underline text-2xl font-bold leading-tight text-cyan-500 dark:!text-cyan-200 font-sora"
             sequence={["Balkan Dreams", "Your software development solutions"]}
           />
         </div>
