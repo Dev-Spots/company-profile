@@ -1,15 +1,19 @@
 "use client";
 
 import LazyLoadImg from "@/components/atoms/image/lazyLoadImg";
-import useMounted from "@/hooks/useMounted";
-import { useTheme } from "next-themes";
 import { useState } from "react";
 import BALKANDREAMSLOGO from "@/components/images/Balkan-Dreams-Logo.png";
+import ThemeButtonToggle from "@/components/molleculs/buttons/themeToogleBtn";
+import MenuItem from "@/components/molleculs/menu/menuItem";
+import { SIDEBAR_MENU } from "@/constants/sidebar";
+import Copyright from "@/components/molleculs/footers/copyright";
+import { useParams } from "next/navigation";
+import type { Lang } from "@/constants/lang";
+import Profile from "@/components/molleculs/contents/profile";
 
 export default function MainSidebar() {
   const [hover, setHover] = useState<boolean>(false);
-  const mount = useMounted();
-  const { resolvedTheme } = useTheme();
+  const { lang } = useParams<{ lang: Lang }>();
 
   return (
     <aside
@@ -21,7 +25,7 @@ export default function MainSidebar() {
         className={`flex h-64 ${hover ? "items-start" : "items-center"}`}
       >
         {hover ? (
-          <></>
+          <Profile />
         ) : (
           <article className="flex flex-col items-center gap-8">
             <div className="z-10 rounded-full border-2 border-white shadow-md dark:border-neutral-800">
@@ -33,9 +37,16 @@ export default function MainSidebar() {
                 className="rounded-full"
               />
             </div>
+            <ThemeButtonToggle />
           </article>
         )}
       </section>
+      <nav className="mb-6 mt-4 flex flex-col gap-3 border-t border-neutral-300 pt-4">
+        {SIDEBAR_MENU(lang).map((el) => (
+          <MenuItem key={el.title} {...el} isHover={hover} />
+        ))}
+      </nav>
+      <Copyright isHover={hover} />
     </aside>
   );
 }
