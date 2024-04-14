@@ -9,6 +9,7 @@ import ThemeButtonToggle from "../buttons/themeToogleBtn";
 import MobileMenuButton from "../buttons/mobileMenuBtn";
 import { AnimatePresence } from "framer-motion";
 import MobileSidebarMenu from "../menu/mobileSidebarMenu";
+import ChangeLangBtn from "../buttons/changeLang";
 
 export default function Profile() {
   const isMobile = useMobile();
@@ -39,6 +40,7 @@ export default function Profile() {
                 "h-[120px] flex-col-reverse !items-end justify-between pb-1"
             )}
           >
+            <ChangeLangBtn />
             <ThemeButtonToggle />
             <MobileMenuButton expand={isOpen} setExpand={toggleMenu} />
           </div>

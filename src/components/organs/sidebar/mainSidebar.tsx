@@ -10,6 +10,7 @@ import Copyright from "@/components/molleculs/footers/copyright";
 import { useParams } from "next/navigation";
 import type { Lang } from "@/constants/lang";
 import Profile from "@/components/molleculs/contents/profile";
+import ChangeLangBtn from "@/components/molleculs/buttons/changeLang";
 
 export default function MainSidebar() {
   const [hover, setHover] = useState<boolean>(false);
@@ -38,6 +39,7 @@ export default function MainSidebar() {
               />
             </div>
             <ThemeButtonToggle />
+            <ChangeLangBtn />
           </article>
         )}
       </section>

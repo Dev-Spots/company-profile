@@ -5,6 +5,7 @@ import Image from "next/image";
 import ThemeButtonToggle from "../buttons/themeToogleBtn";
 import LazyLoadImg from "@/components/atoms/image/lazyLoadImg";
 import BALKANDREAM from "@/components/images/Balkan-Dreams-Logo.png";
+import ChangeLangBtn from "../buttons/changeLang";
 
 export interface ProfileHeaderProps {
   expand: boolean;
@@ -33,7 +34,10 @@ export default function ProfileHeader({ expand, imgSize }: ProfileHeaderProps) {
         <div className="absolute -right-1 bottom-[55px] z-10 rounded-xl py-2 pr-2">
           <ThemeButtonToggle />
         </div>
-        <div className="z-10 -mt-11 rounded-full border-2 border-white shadow-md dark:border-neutral-800">
+        <div className="absolute left-1 bottom-[55px] z-10 rounded-xl py-2 pr-2">
+          <ChangeLangBtn />
+        </div>
+        <div className="-mt-11 rounded-full border-2 border-white shadow-md dark:border-neutral-800">
           <LazyLoadImg
             src={BALKANDREAM}
             alt="profile"
