@@ -5,6 +5,7 @@ import AOS from "aos";
 import { useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import MainSidebar from "../sidebar/mainSidebar";
+import MobileHeader from "../header/mainMobileHeader";
 
 export default function MainViews({ children }: ChildrenProps) {
   const searchParams = useSearchParams();
@@ -20,7 +21,9 @@ export default function MainViews({ children }: ChildrenProps) {
 
   return (
     <div className="flex flex-col justify-center">
-      <header className="flex w-full flex-col justify-center lg:flex-row lg:gap-5 lg:hidden"></header>
+      <header className="flex w-full flex-col justify-center lg:flex-row lg:gap-5 lg:hidden">
+        <MobileHeader />
+      </header>
       <main className="no-scrollbar w-full scroll-smooth transition-all duration-300 lg:ml-72 lg:min-h-screen lg:max-w-[854px]">
         {children}
       </main>
