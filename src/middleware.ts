@@ -9,7 +9,9 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return;
 
-  request.nextUrl.pathname = `/en-US${pathname}`;
+  const url = pathname.split("/");
+  url[1] = "en-US";
+  request.nextUrl.pathname = url.join("/");
   return NextResponse.redirect(request.nextUrl);
 }
 
