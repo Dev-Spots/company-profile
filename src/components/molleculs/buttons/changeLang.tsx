@@ -1,6 +1,6 @@
 "use client";
 
-import { LANGUAGE, type Lang } from "@/constants/lang";
+import { LANGUAGEOBJ, type Lang } from "@/constants/lang";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -24,15 +24,15 @@ export default function ChangeLangBtn() {
       style={{ zIndex: "9999" }}
       className="flex no-scrollbar scroll-smooth relative h-20 w-40 rounded-xl flex-col bg-white dark:bg-neutral-800 py-1 px-1 text-gray-800 shadow-xl overflow-x-scroll overflow-y-visible"
     >
-      {LANGUAGE.map((el) => (
+      {Object.keys(LANGUAGEOBJ).map((el) => (
         <Link
           key={el}
-          href={generateUrl(el)}
+          href={generateUrl(el as Lang)}
           prefetch
           style={{ zIndex: "9999" }}
           className="my-2 border-b-2 px-4 border-gray-100 font-semibold text-neutral-800 dark:text-neutral-300 hover:text-neutral-950 hover:dark:text-neutral-400"
         >
-          {el}
+          {LANGUAGEOBJ[el as Lang]}
         </Link>
       ))}
     </dialog>
