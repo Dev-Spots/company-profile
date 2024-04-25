@@ -14,7 +14,7 @@ export interface ContactFormProps {
 export default function ContactForm() {
   const { pending } = useFormStatus();
   const params = useSearchParams();
-  const searchParams = new URLSearchParams(params!);
+  const searchParams = new URLSearchParams(params.toString());
   const success = searchParams.get("success");
   const error = searchParams.get("error");
   const [data, setData] = useState<ContactFormProps>({

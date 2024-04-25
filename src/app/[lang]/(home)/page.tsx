@@ -13,3 +13,5 @@ export const dinamic = "force-static";
 export async function generateStaticParams() {
   return LANGUAGE.map((lang) => ({ lang }));
 }
+
+export const dynamic = "force-static";

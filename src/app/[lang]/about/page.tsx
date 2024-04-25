@@ -44,3 +44,5 @@ export default function Page({ params: { lang } }: PageProps) {
 export async function generateStaticParams() {
   return LANGUAGE.map((lang) => ({ lang }));
 }
+
+export const dynamic = "force-static";
