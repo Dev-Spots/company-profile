@@ -2,6 +2,7 @@ import {
   BiPaperPlane,
   BiHomeSmile,
   BiLeaf,
+  BiEditAlt,
 } from "@/components/atoms/icons/react-icons-bi";
 import type { Lang } from "./lang";
 
@@ -34,6 +35,12 @@ export const SIDEBAR_MENU = (lang: Lang) => [
     title: "Home",
     href: `/${lang}`,
     icon: <BiHomeSmile size={20} />,
+    isExternal: false,
+  },
+  {
+    title: "Blog",
+    href: `/${lang}/blog`,
+    icon: <BiEditAlt size={20} />,
     isExternal: false,
   },
   {
