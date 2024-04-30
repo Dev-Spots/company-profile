@@ -23,8 +23,8 @@ export default function BlogList({ initialDatas, lang }: BlogListProps) {
   });
 
   return data.length ? (
-    <>
-      <div className="grid gap-6 pt-2 sm:grid-cols-2 mb-4 space-y-2 h-96 overflow-x-visible overflow-y-scroll no-scrollbar">
+    <section className="h-[26rem] flex flex-col justify-between">
+      <div className="grid gap-6 pt-2 sm:grid-cols-2 mb-4 space-y-2 h-80 overflow-x-visible overflow-y-scroll no-scrollbar">
         {data.map((el) => (
           <BlogCard
             key={el._id}
@@ -40,6 +40,6 @@ export default function BlogList({ initialDatas, lang }: BlogListProps) {
       <div ref={ref} className="flex items-center justify-center">
         {pending && <OvalLoader />}
       </div>
-    </>
+    </section>
   ) : null;
 }
