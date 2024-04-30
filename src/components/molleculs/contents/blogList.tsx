@@ -24,7 +24,7 @@ export default function BlogList({ initialDatas, lang }: BlogListProps) {
 
   return data.length ? (
     <>
-      <div className="grid gap-6 pt-2 sm:grid-cols-2 mb-4 space-y-2">
+      <div className="grid gap-6 pt-2 sm:grid-cols-2 mb-4 space-y-2 h-96 overflow-x-visible overflow-y-scroll no-scrollbar">
         {data.map((el) => (
           <BlogCard
             key={el._id}
